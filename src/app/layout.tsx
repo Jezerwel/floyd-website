@@ -13,9 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Floyd 1.0 - Automate the Feed, Elevate the Breed | FeedFrendz",
+  title:
+    "FeedFrendz - Automate the Feed, Elevate the Breed | Smart Aquaculture Solutions",
   description:
-    "Floyd 1.0: An IoT-controlled floating fish feeder designed for small to medium fish pens. Automate your aquaculture feeding with precision and efficiency.",
+    "FeedFrendz: Smart IoT-controlled feeding solutions designed for small to medium fish pens. Automate your aquaculture feeding with precision and efficiency.",
 };
 
 export default function RootLayout({

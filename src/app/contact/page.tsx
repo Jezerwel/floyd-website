@@ -1,50 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
 import Footer from "../components/Footer";
+import Navigation from "../components/Navigation";
 
 export default function Contact() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="bg-card border-b py-4 px-4 sm:px-6 lg:px-8 sticky top-0 z-50 backdrop-blur-md bg-card/95">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/floyd.png"
-              alt="Floyd 1.0 Logo"
-              width={120}
-              height={40}
-              className="h-8 w-auto"
-            />
-          </Link>
-          <div className="flex space-x-8">
-            <Link
-              href="/"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-            >
-              About
-            </Link>
-            <Link
-              href="/packages"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-            >
-              Packages
-            </Link>
-            <Link
-              href="/contact"
-              className="text-foreground font-semibold border-b-2 border-primary pb-1"
-            >
-              Contact
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5 relative overflow-hidden">
@@ -73,8 +33,8 @@ export default function Contact() {
               </span>
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Connect with our team to discuss your specific needs and discover
-              how Floyd 1.0 can optimize your feeding operations.
+              Connect with our team to discover how FeedFrendz solutions can
+              optimize your feeding operations.
             </p>
           </div>
 
@@ -90,7 +50,7 @@ export default function Contact() {
                   Consultation
                 </h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  Expert guidance on the best Floyd 1.0 package for your
+                  Expert guidance on the best FeedFrendz package for your
                   specific operation size and requirements.
                 </p>
               </div>
@@ -113,7 +73,7 @@ export default function Contact() {
                 </h4>
                 <p className="text-muted-foreground leading-relaxed">
                   Ongoing assistance with installation, setup, and maintenance
-                  of your Floyd 1.0 system.
+                  of your FeedFrendz system.
                 </p>
               </div>
             </div>

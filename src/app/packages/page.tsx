@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "../components/Footer";
+import Navigation from "../components/Navigation";
 
 export default function Packages() {
   const packages = [
@@ -70,46 +71,7 @@ export default function Packages() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="bg-card border-b py-4 px-4 sm:px-6 lg:px-8 sticky top-0 z-50 backdrop-blur-md bg-card/95">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/floyd.png"
-              alt="Floyd 1.0 Logo"
-              width={120}
-              height={40}
-              className="h-8 w-auto"
-            />
-          </Link>
-          <div className="flex space-x-8">
-            <Link
-              href="/"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-            >
-              About
-            </Link>
-            <Link
-              href="/packages"
-              className="text-foreground font-semibold border-b-2 border-primary pb-1"
-            >
-              Packages
-            </Link>
-            <Link
-              href="/contact"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-            >
-              Contact
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5 relative overflow-hidden">
@@ -121,9 +83,18 @@ export default function Packages() {
               Feeder
             </span>
           </h1>
-          <p className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-12 leading-relaxed font-light">
-            Select the perfect Floyd 1.0 package for your aquaculture operation
-          </p>
+          <div className="flex flex-col items-center mb-12">
+            <Image
+              src="/floyd.png"
+              alt="Floyd 1.0 Product Logo"
+              width={180}
+              height={70}
+              className="h-14 w-auto mb-6 opacity-90"
+            />
+            <p className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground leading-relaxed font-light text-center">
+              Select the perfect package for your aquaculture operation
+            </p>
+          </div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Whether you&apos;re running a small pond operation or a medium-sized
             one, we have the right feeding solution to optimize your
@@ -232,7 +203,7 @@ export default function Packages() {
             <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 tracking-tight">
               Why Choose{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Floyd 1.0?
+                FeedFrendz?
               </span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -305,7 +276,7 @@ export default function Packages() {
           </h2>
           <p className="text-xl mb-12 opacity-90 max-w-2xl mx-auto leading-relaxed font-light">
             Contact our team to discuss your specific needs and get a
-            personalized quote for your Floyd 1.0 system.
+            personalized quote for your FeedFrendz system.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link

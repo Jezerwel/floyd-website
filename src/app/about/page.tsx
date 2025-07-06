@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "../components/Footer";
+import Navigation from "../components/Navigation";
 
 export default function About() {
   const teamMembers = [
@@ -43,46 +44,7 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="bg-card border-b py-4 px-4 sm:px-6 lg:px-8 sticky top-0 z-50 backdrop-blur-md bg-card/95">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/floyd.png"
-              alt="Floyd 1.0 Logo"
-              width={120}
-              height={40}
-              className="h-8 w-auto"
-            />
-          </Link>
-          <div className="flex space-x-8">
-            <Link
-              href="/"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="text-foreground font-semibold border-b-2 border-primary pb-1"
-            >
-              About
-            </Link>
-            <Link
-              href="/packages"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-            >
-              Packages
-            </Link>
-            <Link
-              href="/contact"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-            >
-              Contact
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Mission Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5 relative overflow-hidden">
@@ -247,8 +209,8 @@ export default function About() {
             Ready to Transform Your Operation?
           </h2>
           <p className="text-xl mb-12 opacity-90 max-w-2xl mx-auto leading-relaxed font-light">
-            Discover how Floyd 1.0 can revolutionize your aquaculture feeding
-            process with our range of packages.
+            Discover how FeedFrendz can revolutionize your aquaculture feeding
+            process with our innovative solutions.
           </p>
           <Link
             href="/packages"

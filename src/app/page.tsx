@@ -1,50 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "./components/Footer";
+import Navigation from "./components/Navigation";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="bg-card border-b py-4 px-4 sm:px-6 lg:px-8 sticky top-0 z-50 backdrop-blur-md bg-card/95">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/floyd.png"
-              alt="Floyd 1.0 Logo"
-              width={120}
-              height={40}
-              className="h-8 w-auto"
-            />
-          </Link>
-          <div className="flex space-x-8">
-            <Link
-              href="/"
-              className="text-foreground font-semibold border-b-2 border-primary pb-1"
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-            >
-              About
-            </Link>
-            <Link
-              href="/packages"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-            >
-              Packages
-            </Link>
-            <Link
-              href="/contact"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-            >
-              Contact
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -57,10 +19,19 @@ export default function Home() {
                 Elevate the Breed
               </span>
             </h1>
-            <p className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-              FLOYD 1.0: An IoT-controlled floating fish feeder designed for
-              small to medium fish pens.
-            </p>
+            <div className="flex flex-col items-center mb-12">
+              <Image
+                src="/floyd.png"
+                alt="Floyd 1.0 Product Logo"
+                width={200}
+                height={80}
+                className="h-16 w-auto mb-6 opacity-90"
+              />
+              <p className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light text-center">
+                An IoT-controlled floating fish feeder designed for small to
+                medium fish pens.
+              </p>
+            </div>
             <Link
               href="/packages"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-5 px-10 rounded-xl text-xl transition-all duration-200 shadow-2xl hover:shadow-primary/25 hover:scale-105 inline-block"
@@ -332,7 +303,7 @@ export default function Home() {
             Let&apos;s Feed Smarter Now
           </h2>
           <p className="text-xl mb-12 opacity-90 max-w-2xl mx-auto leading-relaxed font-light">
-            Join the aquaculture revolution with Floyd 1.0. Choose the perfect
+            Join the aquaculture revolution with FeedFrendz. Choose the perfect
             package for your operation and start optimizing your feeding process
             today.
           </p>
