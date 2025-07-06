@@ -6,38 +6,43 @@ import Navigation from "../components/Navigation";
 export default function About() {
   const teamMembers = [
     {
-      name: "Clarence Von Alarde",
+      firstName: "Clarence Von",
+      lastName: "Alarde",
       role: "Chief Executive Officer",
       description:
-        "Leading FeedFrendz with vision and strategic direction for revolutionizing aquaculture technology.",
+        "Leading FeedFrendz with vision and strategic direction for revolutionizing aquaculture technology and driving sustainable industry growth.",
       image: "/Alarde.png",
     },
     {
-      name: "Jened Lucio Caguimbaga",
-      role: "Product and Design Director",
+      firstName: "Jened Lucio",
+      lastName: "Caguimbaga",
+      role: "Chief Product Officer",
       description:
-        "Crafting innovative designs and user experiences that make aquaculture technology accessible and intuitive.",
+        "Overseeing product strategy and development, ensuring our solutions meet market demands and drive innovation in aquaculture technology.",
       image: "/Caguimbaga.png",
     },
     {
-      name: "Johnrey Dexter Palma",
-      role: "Mechanical Engineer",
+      firstName: "Johnrey Dexter",
+      lastName: "Palma",
+      role: "Chief Engineering Officer",
       description:
-        "Engineering robust and reliable mechanical systems for optimal performance in aquaculture environments.",
+        "Leading engineering excellence and technical operations, ensuring our systems deliver reliable performance and meet quality standards.",
       image: "/Palma.png",
     },
     {
-      name: "Richylle Delante",
-      role: "Sales & Marketing Director",
+      firstName: "Richylle",
+      lastName: "Delante",
+      role: "Chief Marketing Officer",
       description:
-        "Building relationships and connecting with aquaculture professionals to understand their unique needs.",
+        "Driving brand strategy and market expansion, connecting FeedFrendz with aquaculture professionals and building lasting partnerships.",
       image: "/Delante.png",
     },
     {
-      name: "Jezerwel Griño",
-      role: "Software Engineer",
+      firstName: "Jezerwel",
+      lastName: "Griño",
+      role: "Chief Technology Officer",
       description:
-        "Developing cutting-edge IoT solutions and mobile applications for seamless system control.",
+        "Spearheading technological innovation and digital transformation, architecting smart aquaculture solutions through advanced IoT systems.",
       image: "/Griño.png",
     },
   ];
@@ -84,61 +89,37 @@ export default function About() {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-8 items-stretch">
-            {teamMembers.slice(0, 3).map((member, index) => (
+          <div className="flex flex-wrap justify-center gap-6 items-stretch">
+            {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="bg-card p-10 rounded-2xl shadow-xl border border-border/50 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group flex flex-col w-full sm:w-80 min-h-[500px]"
+                className="bg-card p-8 rounded-2xl shadow-xl border border-border/50 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group flex flex-col w-full sm:w-64 lg:w-72 min-h-[500px]"
               >
-                <div className="w-36 h-36 rounded-full mx-auto mb-8 overflow-hidden shadow-2xl group-hover:scale-110 transition-transform duration-300 bg-gradient-to-br from-primary/10 to-accent/10">
+                <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden shadow-2xl group-hover:scale-110 transition-transform duration-300 bg-gradient-to-br from-primary/10 to-accent/10">
                   <Image
                     src={member.image}
-                    alt={`${member.name} - ${member.role}`}
-                    width={144}
-                    height={144}
+                    alt={`${member.firstName} ${member.lastName} - ${member.role}`}
+                    width={128}
+                    height={128}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-card-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-                  {member.name}
-                </h3>
-                <p className="text-primary font-bold mb-6 text-lg">
+                <div className="text-center mb-3">
+                  <h3 className="text-xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300">
+                    {member.firstName}
+                  </h3>
+                  <h3 className="text-xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300">
+                    {member.lastName}
+                  </h3>
+                </div>
+                <p className="text-primary font-bold mb-4 text-base">
                   {member.role}
                 </p>
-                <p className="text-muted-foreground leading-relaxed flex-1">
+                <p className="text-muted-foreground leading-relaxed flex-1 text-sm">
                   {member.description}
                 </p>
               </div>
             ))}
-
-            {/* Bottom row - centered */}
-            <div className="w-full flex justify-center gap-8 mt-4">
-              {teamMembers.slice(3).map((member, index) => (
-                <div
-                  key={index + 3}
-                  className="bg-card p-10 rounded-2xl shadow-xl border border-border/50 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group flex flex-col w-full sm:w-80 min-h-[500px]"
-                >
-                  <div className="w-36 h-36 rounded-full mx-auto mb-8 overflow-hidden shadow-2xl group-hover:scale-110 transition-transform duration-300 bg-gradient-to-br from-primary/10 to-accent/10">
-                    <Image
-                      src={member.image}
-                      alt={`${member.name} - ${member.role}`}
-                      width={144}
-                      height={144}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h3 className="text-2xl font-bold text-card-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-                    {member.name}
-                  </h3>
-                  <p className="text-primary font-bold mb-6 text-lg">
-                    {member.role}
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed flex-1">
-                    {member.description}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
