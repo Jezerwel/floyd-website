@@ -200,6 +200,85 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Mobile App Interface Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-muted/10 to-background">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 tracking-tight">
+              Intuitive Mobile App Control
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Monitor and control your Floyd 1.0 feeder system with our
+              comprehensive mobile application
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+            {/* Dashboard Screen */}
+            <div className="bg-card p-8 rounded-2xl shadow-xl border border-border/50 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group">
+              <div className="relative mb-8">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl blur-xl scale-110"></div>
+                <Image
+                  src="/0c0ab3a8-03a2-4dbb-8111-adf3bd800944.jpeg"
+                  alt="Floyd 1.0 Dashboard - Real-time monitoring of feeder capacity, water temperature, WiFi signal and system alerts"
+                  width={300}
+                  height={600}
+                  className="relative z-10 rounded-xl mx-auto shadow-lg group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-card-foreground mb-4">
+                Dashboard Overview
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Monitor feeder capacity, water temperature, WiFi signal
+                strength, and system alerts in real-time from your dashboard.
+              </p>
+            </div>
+
+            {/* Controls Screen */}
+            <div className="bg-card p-8 rounded-2xl shadow-xl border border-border/50 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group">
+              <div className="relative mb-8">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl blur-xl scale-110"></div>
+                <Image
+                  src="/068bdb83-8565-40b1-9ed2-fc881a699aab.jpeg"
+                  alt="Floyd 1.0 Controls - Paddle controls for navigation, feed dispenser management and LED status control"
+                  width={300}
+                  height={600}
+                  className="relative z-10 rounded-xl mx-auto shadow-lg group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-card-foreground mb-4">
+                Remote Controls
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Control paddle movement and manage feed dispensing remotely.
+              </p>
+            </div>
+
+            {/* Sensor Logs Screen */}
+            <div className="bg-card p-8 rounded-2xl shadow-xl border border-border/50 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group">
+              <div className="relative mb-8">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl blur-xl scale-110"></div>
+                <Image
+                  src="/22368f52-df7c-40b9-a9f0-95dc68fffd8f.jpeg"
+                  alt="Floyd 1.0 Sensor Logs - Logging status, sensor data monitoring and alerts history tracking"
+                  width={300}
+                  height={600}
+                  className="relative z-10 rounded-xl mx-auto shadow-lg group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-card-foreground mb-4">
+                Sensor Monitoring
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Track logging status, review sensor data history, and maintain
+                comprehensive records of all system activities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Key Features Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-muted/20">
         <div className="max-w-6xl mx-auto">
